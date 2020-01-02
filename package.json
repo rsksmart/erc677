@@ -1,0 +1,33 @@
+{
+  "name": "@rsksmart/erc677",
+  "version": "1.0.0",
+  "description": "ERC-677 Token Implementation",
+  "files": [
+    "/contracts",
+    "!/contracts/Migrations.sol"
+  ],
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnsdomains/erc677.git"
+  },
+  "keywords": [
+    "rsk",
+    "rif"
+  ],
+  "author": "ilanolkies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnsdomains/erc677/issues"
+  },
+  "homepage": "https://github.com/rnsdomains/erc677#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.4",
+    "chai": "^4.2.0"
+  }
+}
