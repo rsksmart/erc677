@@ -6,5 +6,5 @@ pragma solidity ^0.5.0;
  * See https://github.com/ethereum/EIPs/issues/677 for details.
  */
 contract ERC677TransferReceiver {
-    function tokenFallback(address from, uint256 amount, bytes memory data) public returns (bool);
+    function tokenFallback(address from, uint256 amount, bytes calldata data) external returns (bool);
 }

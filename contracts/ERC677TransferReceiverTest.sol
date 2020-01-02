@@ -10,7 +10,7 @@ import "./ERC677TransferReceiver.sol";
 contract ERC677TransferReceiverTest is ERC677TransferReceiver {
     event Test(address from, uint256 amount, bytes data);
 
-    function tokenFallback(address from, uint256 amount, bytes memory data) public returns (bool) {
+    function tokenFallback(address from, uint256 amount, bytes calldata data) external returns (bool) {
         emit Test(from, amount, data);
     }
 }

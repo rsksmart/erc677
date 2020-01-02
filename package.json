@@ -1,6 +1,6 @@
 {
   "name": "@rsksmart/erc677",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ERC-677 Token Implementation",
   "files": [
     "/contracts",
