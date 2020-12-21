@@ -11,7 +11,7 @@ npm i @rsksmart/erc677
 ## Usage
 
 ```js
-const ERC677 = artifacts.require('ERC677');
+const ERC677 = artifacts.require('@rsksmart/erc677');
 
 contract('My contract tests', async accounts => {
   let erc677;
@@ -32,7 +32,7 @@ contract('My contract tests', async accounts => {
 
 ```js
 const Web3 = require('web3');
-const ERC677Data = require('@rsksmart/rns-erc677/ERC677Data.json');
+const ERC677Data = require('@rsksmart/erc677/ERC677Data.json');
 const web3 = new Web3('https://public-node.rsk.co')
 const ERC677 = new web3.eth.Contract(ERC677Data.abi, ERC677Data.address.rskMainnet);
 ```
@@ -51,8 +51,8 @@ You can use them as follow:
 
 ```typescript
 import Web3 from 'web3'
-import ERC677 from '@rsksmart/rns-erc677/types/web3-v1-contracts/ERC677Data.d.ts'
-import ERC677Data from '@rsksmart/rns-erc677/ERC677Data.json'
+import ERC677 from '@rsksmart/erc677/types/web3-v1-contracts/ERC677Data.d.ts'
+import ERC677Data from '@rsksmart/erc677/ERC677Data.json'
 
 const web3 = new Web3('https://public-node.rsk.co')
 const rif = new web3.eth.Contract(ERC677Data.abi, ERC677Data.address.rskMainnet) as ERC677
