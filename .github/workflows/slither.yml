@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v1
-      - run: npm ci
+      - run: npm i
       - name: Slither Static Analysis
         uses: luisfontes19/slither-static-analysis-action@v0.3.2
         with:
