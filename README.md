@@ -1,6 +1,29 @@
-# erc677
+<p align="middle">
+  <img src="https://www.rifos.org/assets/img/logo.svg" alt="logo" height="100" >
+</p>
+<h3 align="middle"><code>@rsksmart/erc677</code></h3>
+<p align="middle">
+  Simple implementation of ERC-677 token contract, compatible with RIF Token.
+</p>
+<p align="middle">
+  <a href="https://github.com/rsksmart/erc677/actions/workflows/ci.yml">
+    <img src="https://github.com/rsksmart/erc677/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/rsksmart/erc677/actions/workflows/slither.yml">
+    <img src="https://github.com/rsksmart/erc677/actions/workflows/slither.yml/badge.svg" />
+  </a>
+  <a href="https://lgtm.com/projects/g/rsksmart/express-did-auth/context:javascript">
+    <img src="https://img.shields.io/lgtm/grade/javascript/github/rsksmart/express-did-auth" />
+  </a>
+  <a href='https://coveralls.io/github/rsksmart/erc677?branch=master'>
+    <img src='https://coveralls.io/repos/github/rsksmart/erc677/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
+  <a href="https://badge.fury.io/js/%40rsksmart%2Ferc677">
+    <img src="https://badge.fury.io/js/%40rsksmart%2Ferc677.svg" alt="npm" />
+  </a>
+</p>
 
-Simple implementation of ERC-677 token contract, compatible with RIF Token.
+> This package is only to **use for testing purposes**
 
 ## Install
 
@@ -60,7 +83,10 @@ const rif = new web3.eth.Contract(ERC677Data.abi, ERC677Data.address.rskMainnet)
 
 Replace `web3-v1-contracts` with the proper library version.
 
----
+## Versions
+
+- Installing v1 will use Solidity v5
+- Installing v2 will use Solidity v8
 
 ---
 

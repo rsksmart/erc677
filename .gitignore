@@ -2,3 +2,5 @@ node_modules/
 build/
 ERC677Data.json
 types/
+coverage
+coverage.json
