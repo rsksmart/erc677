@@ -6,9 +6,7 @@
   Simple implementation of ERC-677 token contract, compatible with RIF Token.
 </p>
 
-<div class="alert alert-warning">
-  This package is only to **use for testing purposes**
-</div>
+> This package is only to **use for testing purposes**
 
 ## Install
 
