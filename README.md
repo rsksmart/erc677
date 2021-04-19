@@ -5,6 +5,20 @@
 <p align="middle">
   Simple implementation of ERC-677 token contract, compatible with RIF Token.
 </p>
+<p align="middle">
+  <a href="https://github.com/rsksmart/erc677/actions/workflows/ci.yml">
+    <img src="https://github.com/rsksmart/erc677/actions/workflows/ci.yml/badge.svg" />
+  </a>
+  <a href="https://github.com/rsksmart/erc677/actions/workflows/slither.yml">
+    <img src="https://github.com/rsksmart/erc677/actions/workflows/slither.yml/badge.svg" />
+  </a>
+  <a href="https://lgtm.com/projects/g/rsksmart/express-did-auth/context:javascript">
+    <img src="https://img.shields.io/lgtm/grade/javascript/github/rsksmart/express-did-auth" />
+  </a>
+  <a href="https://badge.fury.io/js/%40rsksmart%2Ferc677">
+    <img src="https://badge.fury.io/js/%40rsksmart%2Ferc677.svg" alt="npm" />
+  </a>
+</p>
 
 > This package is only to **use for testing purposes**
 
