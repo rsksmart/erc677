@@ -4,8 +4,8 @@ pragma solidity ^0.8.0;
 // Use only for testing purposes
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "./ERC677TransferReceiver.sol";
 import "./IERC677.sol";
+import "./IERC677TransferReceiver.sol";
 
 contract ERC677 is IERC677, ERC20 {
     constructor(
@@ -27,7 +27,7 @@ contract ERC677 is IERC677, ERC20 {
 
         emit Transfer(msg.sender, to, value, data);
 
-        ERC677TransferReceiver receiver = ERC677TransferReceiver(to);
+        IERC677TransferReceiver receiver = IERC677TransferReceiver(to);
         // slither-disable-next-line unused-return
         receiver.tokenFallback(msg.sender, value, data);
 
