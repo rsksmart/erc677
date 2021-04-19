@@ -12,7 +12,6 @@ contract('ERC677', async accounts => {
       web3.utils.toBN('1000000000000000000000'),
       'RIFOS',
       'RIF',
-      web3.utils.toBN('18'),
     );
 
     receiver = await ERC677TransferReceiverTest.new();

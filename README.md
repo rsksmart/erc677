@@ -1,6 +1,14 @@
-# erc677
+<p align="middle">
+  <img src="https://www.rifos.org/assets/img/logo.svg" alt="logo" height="100" >
+</p>
+<h3 align="middle"><code>@rsksmart/erc677</code></h3>
+<p align="middle">
+  Simple implementation of ERC-677 token contract, compatible with RIF Token.
+</p>
 
-Simple implementation of ERC-677 token contract, compatible with RIF Token.
+<div class="alert alert-warning">
+  This package is only to **use for testing purposes**
+</div>
 
 ## Install
 
@@ -60,7 +68,10 @@ const rif = new web3.eth.Contract(ERC677Data.abi, ERC677Data.address.rskMainnet)
 
 Replace `web3-v1-contracts` with the proper library version.
 
----
+## Versions
+
+- Installing v1 will use Solidity v5
+- Installing v2 will use Solidity v8
 
 ---
 

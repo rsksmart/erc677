@@ -1,20 +1,19 @@
-pragma solidity ^0.5.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-// Use only for testing reasons
+// Use only for testing purposes
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
 import "./ERC677TransferReceiver.sol";
 import "./IERC677.sol";
 
-contract ERC677 is IERC677, ERC20, ERC20Detailed {
+contract ERC677 is IERC677, ERC20 {
     constructor(
         address initialAccount,
         uint256 initialBalance,
         string memory name,
-        string memory symbol,
-        uint8 decimals
-    ) ERC20Detailed(name, symbol, decimals) public {
+        string memory symbol
+    ) ERC20(name, symbol) {
         _mint(initialAccount, initialBalance);
     }
 
@@ -22,7 +21,7 @@ contract ERC677 is IERC677, ERC20, ERC20Detailed {
      * ERC-677's only method implementation
      * See https://github.com/ethereum/EIPs/issues/677 for details
      */
-    function transferAndCall(address _to, uint _value, bytes memory _data) public returns (bool) {
+    function transferAndCall(address _to, uint _value, bytes memory _data) public override returns (bool) {
         bool result = super.transfer(_to, _value);
         if (!result) return false;
 

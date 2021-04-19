@@ -1,0 +1,23 @@
+name: slither scan
+
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    name: Solidity Security
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+      - run: npm ci
+      - name: Slither Static Analysis
+        uses: luisfontes19/slither-static-analysis-action@v0.3.2
+        with:
+          slither-version: '0.6.13'
+          run-npm-install: false
+          high-threshold: 1
+          medium-threshold: 1
+          low-threshold: 3
+          optimization-threshold: 5
+          informative-threshold: 10
+          projectPath: "."
