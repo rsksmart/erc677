@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "npx truffle test",
+    "coverage": "npx truffle run coverage",
     "prepublish": "npx truffle compile && node ./datagen.js && npm run types-generation",
     "types-generation": "typechain --target=web3-v1 '*Data.json' && typechain --target=web3-v2 '*Data.json' && typechain --target=truffle '*Data.json' && typechain --target=ethers '*Data.json'"
   },
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@openzeppelin/test-helpers": "^0.5.4",
+    "solidity-coverage": "^0.7.16",
     "truffle": "^5.3.2",
     "typechain": "^1.0.5",
     "typechain-target-ethers": "^1.0.4",
