@@ -15,6 +15,9 @@
   <a href="https://lgtm.com/projects/g/rsksmart/express-did-auth/context:javascript">
     <img src="https://img.shields.io/lgtm/grade/javascript/github/rsksmart/express-did-auth" />
   </a>
+  <a href='https://coveralls.io/github/rsksmart/erc677?branch=master'>
+    <img src='https://coveralls.io/repos/github/rsksmart/erc677/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
   <a href="https://badge.fury.io/js/%40rsksmart%2Ferc677">
     <img src="https://badge.fury.io/js/%40rsksmart%2Ferc677.svg" alt="npm" />
   </a>
