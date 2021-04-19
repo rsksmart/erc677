@@ -11,9 +11,9 @@ contract ERC677 is IERC677, ERC20 {
     constructor(
         address initialAccount,
         uint256 initialBalance,
-        string memory name,
-        string memory symbol
-    ) ERC20(name, symbol) {
+        string memory tokenName,
+        string memory tokenSymbol
+    ) ERC20(tokenName, tokenSymbol) {
         _mint(initialAccount, initialBalance);
     }
 
@@ -21,14 +21,15 @@ contract ERC677 is IERC677, ERC20 {
      * ERC-677's only method implementation
      * See https://github.com/ethereum/EIPs/issues/677 for details
      */
-    function transferAndCall(address _to, uint _value, bytes memory _data) public override returns (bool) {
-        bool result = super.transfer(_to, _value);
+    function transferAndCall(address to, uint value, bytes memory data) external override returns (bool) {
+        bool result = super.transfer(to, value);
         if (!result) return false;
 
-        emit Transfer(msg.sender, _to, _value, _data);
+        emit Transfer(msg.sender, to, value, data);
 
-        ERC677TransferReceiver receiver = ERC677TransferReceiver(_to);
-        receiver.tokenFallback(msg.sender, _value, _data);
+        ERC677TransferReceiver receiver = ERC677TransferReceiver(to);
+        // slither-disable-next-line unused-return
+        receiver.tokenFallback(msg.sender, value, data);
 
         // IMPORTANT: the ERC-677 specification does not say
         // anything about the use of the receiver contract's
