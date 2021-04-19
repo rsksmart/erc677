@@ -20,6 +20,7 @@ jobs:
     - run: npm i
     - run: npm test
     - run: npm run coverage
+    - run: npm run lint
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
