@@ -1,6 +1,6 @@
 {
   "name": "@rsksmart/erc677",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ERC-677 Token Implementation",
   "files": [
     "/contracts",
@@ -13,7 +13,7 @@
     "coverage": "npx truffle run coverage",
     "lint": "npx prettier --list-different 'contracts/**/*.sol' 'test/**/*.test.js'",
     "lint:fix": "npx prettier --write 'contracts/**/*.sol' 'test/**/*.test.js'",
-    "prepublish": "npx truffle compile && node ./datagen.js && npm run types-generation",
+    "prepublish": "npx truffle compile",
     "types-generation": "typechain --target=web3-v1 '*Data.json' && typechain --target=web3-v2 '*Data.json' && typechain --target=truffle '*Data.json' && typechain --target=ethers '*Data.json'"
   },
   "repository": {
